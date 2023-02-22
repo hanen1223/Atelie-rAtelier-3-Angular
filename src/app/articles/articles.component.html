@@ -1,0 +1,23 @@
+<p>{{titre}}</p>
+<input />
+
+<div *ngFor="let p of listeArticles , let i=index" >
+    <div *ngIf="p.categorie!='Travail'">
+        <div *ngIf="p.categorie =='Education'" style="color:blue ">
+            <fieldset>
+                <legend>{{ p.titre }}</legend>
+                Auteur : {{ p.auteur }} <br>
+                Contenu : {{ p.contenu }}<br>
+                Date : {{ p.date }}
+            </fieldset>
+        </div>
+        <div *ngIf="p.categorie !='Education'">
+            <fieldset>
+                <legend>{{ p.titre }}</legend>
+                Auteur : {{ p.auteur }} <br>
+                Contenu : {{ p.contenu }}<br>
+                Date : {{ p.date }}
+            </fieldset>
+        </div>
+    </div>
+</div>
