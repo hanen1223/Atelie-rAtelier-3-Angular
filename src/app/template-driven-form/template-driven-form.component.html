@@ -21,16 +21,16 @@
             
             <br><label>Type de carte: </label>
             <input #typeCarte="ngModel" [(ngModel)]="user.typeCarte" required name="typeCarte" class="form-control" type="text">
-            <div class="alert alert-danger" *ngIf="typeCarte.invalid&&(numeroCarte.dirty||typeCarte.touched)">
+            <div class="alert alert-danger" *ngIf="typeCarte.invalid&&(typeCarte.dirty||typeCarte.touched)">
             <div *ngIf="typeCarte.errors?.['required']"> is required</div>
             </div>
             <br>
             <br>
             <label>Numero de carte: </label> 
-            <input #numeroCarte="ngModel" [(ngModel)]="user.numeroCarte" minlength="16" maxlength="16" pattern="[0-9]{16}" required name="numeroCarte" class="form-control" type="text">
+            <input #numeroCarte="ngModel" [(ngModel)]="user.numeroCarte" maxlength="16" pattern="[0-9]{16}" required name="numeroCarte" class="form-control" type="text">
             <div class="alert alert-danger" *ngIf="numeroCarte.invalid&&(numeroCarte.dirty||numeroCarte.touched)">
                 <div *ngIf="numeroCarte.errors?.['maxlength']">Le numéro de carte contient 16 chiffres.</div>
-                <div *ngIf="numeroCarte.errors?.['minlength']">Le numéro de carte contient 16 chiffres.</div>
+                <div *ngIf="numeroCarte.errors?.['pattern']">Le numéro de carte contient 16 chiffres.</div>
                 <div *ngIf="numeroCarte.errors?.['required']"> is required</div>
             </div>
             <br>
