@@ -1,5 +1,7 @@
 import { Product } from './../core/model/product';
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product.service';
+import { Router, Routes } from '@angular/router';
 
 @Component({
   selector: 'app-add-products',
@@ -8,10 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddProductsComponent implements OnInit {
 product!:Product
-  constructor() { }
+  constructor(private productService:ProductService,private  route:Router) { }
 
   ngOnInit(): void {
     this.product=new Product;
   }
-
+  add(){
+    this.productService.addProduct(this.product);//this.product= produit eli fou9'ha
+    this.route.navigateByUrl("/products");//redirection vers la page de product 
+  }
 }
