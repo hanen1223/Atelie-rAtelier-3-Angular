@@ -12,6 +12,7 @@ import { ArticlesComponent } from './articles/articles.component';
 import { AddProductsComponent } from './add-products/add-products.component';
 import { FormsModule } from '@angular/forms';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { ProductItemComponent } from './product-item/product-item.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
     DetailProductsComponent,
     ArticlesComponent,
     AddProductsComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,

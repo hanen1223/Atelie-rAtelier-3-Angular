@@ -18,12 +18,15 @@ this.listProduct=this.service.listPr//affecter la liste de service dans la liste
 this.alertStock= this.calculS.getNumberOf(this.listProduct,'quantity',0)
   }
 
-  buy(p : number){
+  buy(product1 : Product){
+    let p =this.listProduct.indexOf(product1)
     this.listProduct[p].quantity--;
   }
 
-  like(l : number){
-    this.listProduct[l].like++;
+  //like(l : number){
+    like(product : Product){
+      let i =this.listProduct.indexOf(product)
+    this.listProduct[i].like++;
   }
 
 }

@@ -1,0 +1,12 @@
+<p>product-item works!</p>
+<div class="card-body">
+    
+    <h5 class="card-title">{{ p.title }}</h5>
+    <p>Quantity : {{ p.quantity }}</p>
+    <p>Price : {{ p.price }}</p>
+    <p>Like : {{ p.like }}</p>
+    <button class="btn btn-primary "(click)="sendNotif()" >Like</button>
+    <button class="btn btn-primary" (click)="sendNotifB()">Buy</button>
+    <button class="btn btn-primary" [routerLink]="['/product',p.id]" >Details</button>
+    
+</div>
