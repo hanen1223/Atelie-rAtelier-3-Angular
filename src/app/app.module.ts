@@ -13,6 +13,7 @@ import { AddProductsComponent } from './add-products/add-products.component';
 import { FormsModule } from '@angular/forms';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { ProductItemComponent } from './product-item/product-item.component';
+import { HttpClientModule } from '@angular/common/http'
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ProductItemComponent } from './product-item/product-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

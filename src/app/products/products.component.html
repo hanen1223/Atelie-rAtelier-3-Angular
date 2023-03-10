@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-md-4" *ngFor="let prod of listProduct, let p=index">
         <div class="card" style="width: 18rem; text-align: center00; border-color: blue;">
-      <app-product-item [p]=prod (incrementEvent)="like($event)" (incrementEventbuy)=" buy($event)"></app-product-item>
+      <app-product-item [p]=prod (incrementEvent)="like($event)" (incrementEventbuy)=" buy($event)" (delete)="delete($event)"></app-product-item>
 
                 
             </div>
